@@ -1,16 +1,26 @@
 #### Table of Contents
 
 [User Story](#user-story)
+
 [Motivation](#motivation)
+
 [Uniqueness](#uniqueness)
+
 [Preview Photo](#preview-photo)
+
 [Usage](#usage)
+
 [Git Hub URL](#git-hub-URL)
+
 [Author](#author)
+
 [Email](#email)
+
 [License](#license)
+
 [Badge](#badge)
-## [Text Editor Pro
+
+## Text Editor Pro
 
 This is a text editor that will save your information within the web browser using the browsers casche.  
 
@@ -44,7 +54,7 @@ Josh Jankowski
 
 ## Email
 
-[mailto](mailto:joshjankowski@gmail.com)
+[Click Here to Email Me](mailto:joshjankowski@gmail.com)
 
 ## License
 
