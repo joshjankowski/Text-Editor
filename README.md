@@ -1,6 +1,5 @@
 #### Table of Contents
 
-[Text Editor Pro](#Text Editor Pro)
 [User Story](#user-story)
 [Motivation](#motivation)
 [Uniqueness](#uniqueness)
