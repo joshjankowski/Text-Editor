@@ -1,37 +1,24 @@
-const { application } = require("express");
-const e = require("express");
-
 const butInstall = document.getElementById('buttonInstall');
 
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI to notify the user they can add to home screen
-  butInstall.style.display = 'block';
-
+// Logic for installing the PWA
+// TODO: Add an event handler to the `beforeinstallprompt` event
+window.addEventListener('beforeinstallprompt', (event) => {
+    window.deferredPrompt = event;
+  butInstall.classList.toggle("hidden", false);
 });
 
-butInstall.addEventListener('click', (e) => {
-  // hide our user interface that shows our A2HS button
-  // butInstall.style.display = 'none';
-  // Show the prompt
-  deferredPrompt.prompt();
-  // Wait for the user to respond to the prompt
-  deferredPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('User accepted the A2HS prompt');
-    } 
-    // else {
-    //   console.log('User dismissed the A2HS prompt');
-    // }
-    deferredPrompt = null;
-  });
+// TODO: Implement a click event handler on the `butInstall` element
+butInstall.addEventListener('click', async () => {
+    const promptEvent = window.deferredPrompt;
+  if (!promptEvent) {
+    return;
+  }
+  promptEvent.prompt();
+  window.deferredPrompt = null;
+  butInstall.classList.toggle("hidden", true);
 });
 
+// TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
-    app.logEvent('a2hs', 'installed')
+    window.deferredPrompt = null;
 });
