@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/magickw/TextEditor.git"
+    "url": "git+https://github.com/joshjankowski/TextEditor.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/magickw/TextEditor/issues"
+    "url": "https://github.com/joshjankowski/TextEditor/issues"
   },
-  "homepage": "https://github.com/magickw/TextEditor#readme",
+  "homepage": "https://github.com/joshuajankowski/TextEditor#readme",
   "dependencies": {
     "express": "^4.17.3"
   },
